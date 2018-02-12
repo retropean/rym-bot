@@ -1,0 +1,8 @@
+Content-Encoding: gzip
+Set-Cookie: sec_bs=33a643af8d0a00223cd7465763d57dae; Expires=Thu, 25-Jan-2018 20:05:34 GMT; Path=/; HttpOnly;
+Set-Cookie: sec_ts=1516908334; Expires=Thu, 25-Jan-2018 20:05:34 GMT; Path=/; HttpOnly;
+Set-Cookie: sec_id=cb94477d8df1934266356003012e6b25; Expires=Thu, 25-Jan-2018 20:05:34 GMT; Path=/; HttpOnly;
+Server: nginx
+Date: Thu, 25 Jan 2018 12:15:43 GMT
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0

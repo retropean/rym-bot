@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- sonemic-error-502.html -->
+<html>
+
+   <head>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      
+      <title>Error 502</title>
+
+      <style>
+
+         body {
+            font-family:Raleway, Helvetica, Arial;
+            font-size:8=18px;
+            -webkit-font-feature-settings: "lnum";
+            font-feature-settings: "lnum";
+            background:#ddd;
+
+         }
+
+         .logo_bg {
+            
+            height:10em;
+            border-radius:10px;
+            margin-bottom:2em;
+         }
+
+         .logo_sonemic {
+            background:url('https://e.snmc.io/3.0/img/sonemic-bg.png');
+            background-size:cover;
+         }
+
+
+         .logo_cinemos {
+            background:url('https://e.snmc.io/3.0/img/cinemos-bg.png');
+            background-size:cover;
+         }
+
+         .logo_glitchwave {
+            background:url('https://e.snmc.io/3.0/img/glitchwave-bg.png');
+            background-size:cover;
+         }
+
+         .content {
+            max-width:50em;
+            margin:0 auto;
+            padding-top:4em;
+            padding-left:3em;
+            padding-right:3em;
+            color:#333;
+            xbackground:rgba(255,255,255,0.9);
+            min-height:80vh;
+         }
+
+         h1 {
+            font-size:2.5em;
+            height:auto;
+            color:#fff;
+            font-weight:normal;
+            text-align:center;
+            line-height:4;
+            text-shadow:1px 1px 5px #000;
+            xpadding-bottom:1em;
+            xmargin-bottom:1em;
+            xborder-bottom:1px solid #ddd;
+         }
+
+         p {
+            padding-left:1em;
+            padding-right:1em;
+            font-size:1.2em;
+            line-height:1.5em;
+            margin-top:1em;
+         }
+
+         @media only screen and (max-width:48em) {
+
+            .content {
+               padding:0.5em;
+            }
+
+            h1 {
+               font-size:1.5em;
+               line-height:6.666;
+            }
+
+            p {
+               padding:0.5em;
+            }
+
+         }
+
+
+      </style>
+
+      <script>
+
+         // delete any non-HttpOnly cookies
+         function deleteAllCookies() {
+             var cookies = document.cookie.split(";");
+
+             for (var i = 0; i < cookies.length; i++) {
+                 var cookie = cookies[i];
+                 var eqPos = cookie.indexOf("=");
+                 var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                 document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+             }
+         }
+
+         deleteAllCookies();
+
+         function getSiteName() {
+
+            var host = window.location.host;
+
+            switch (host) {
+
+               case "sonemic.com": 
+                  return "Sonemic is ";
+
+               case "cinemos.com": 
+                  return "Cinemos is ";
+
+               case "glitchwave.com": 
+                  return "Glitchwave is ";
+
+               case "rateyourmusic.com": 
+                  return "RYM is ";
+
+               default : 
+                  return "This site is ";
+
+            }
+
+         }
+
+
+         function updateBanner() {
+
+            var host = window.location.host;
+
+            var el = document.getElementById('logo_bg')
+            var banner = document.getElementById('banner')
+
+            switch (host) {
+
+               case "cinemos.com": 
+                  el.className='logo_bg logo_cinemos';
+                  banner.innerText = 'cinemos.com';
+                  break;
+
+               case "glitchwave.com": 
+                  el.className='logo_bg logo_glitchwave';
+                  banner.innerText = 'glitchwave.com';
+                  break;
+
+               case "rateyourmusic.com": 
+                  el.className='logo_bg logo_sonemic';
+                  banner.innerText = 'rateyourmusic.com / 2.5';
+                  break;
+
+               case "sonemic.com": 
+               default : 
+                  el.className='logo_bg logo_sonemic';
+                  banner.innerText = 'sonemic.com';
+
+            }
+
+         }
+
+      </script>
+
+   </head>
+
+   <body>
+
+      <div class="content">
+         <div id="logo_bg" class="logo_bg"><h1>Error 502 : Bad Gateway</h1></div>
+
+         <p><script>document.write(getSiteName())</script> currently unavailable due to server connection issues. This error typically only lasts for a few seconds; however, if this message persists for a longer period of time, please check our <a rel="noopener nofollow" target="_blank" href="https://twitter.com/sonemic">Twitter</a> page for status updates.</p>
+
+         <p id="banner" style="text-align:right;font-size:0.8em;position:fixed;bottom:1em;left:0;right:0;text-align:center;color:#999">sonemic.com.</p>
+
+         <script>
+            updateBanner();
+         </script>
+         
+      </div>
+
+   </body>
+
+</html>

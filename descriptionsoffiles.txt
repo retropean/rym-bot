@@ -1,0 +1,6 @@
+Assignment 1_ Automated Data Acquisition.pdf - the 2 page double-spaced paper
+rymbot/ - folder that contains all of the scrapy related files. 
+crawls/ - folder that contains data for starting and stopping a scrape and continuing where it left off
+eda.r - r file in which I did the final overview of data in the paper
+home_crawl.csv - this is the output of scrapy - all the data
+launch.bat - batch file with easy way to launch the script without going into command line, it will dump a csv named home_crawl.csv

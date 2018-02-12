@@ -1,0 +1,1 @@
+scrapy crawl rym -o home_crawl.csv -t csv
